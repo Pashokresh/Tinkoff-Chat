@@ -414,6 +414,7 @@
 				E9F3CE441E6827C700D6F89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9F3CE451E6827C700D6F89E /* Build configuration list for PBXNativeTarget "TinkoffChatTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				E9F3CE471E6827C700D6F89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
