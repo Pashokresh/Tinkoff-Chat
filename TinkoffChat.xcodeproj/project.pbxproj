@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93FE37C1E88FFBF00798089 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93FE37B1E88FFBF00798089 /* ConversationListViewController.swift */; };
+		E98B8BCD1E8A56500045AACC /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98B8BCC1E8A56500045AACC /* ContactTableViewCell.swift */; };
+		E9CD0C051E8AE37900ADCA9C /* Interlocutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD0C041E8AE37900ADCA9C /* Interlocutor.swift */; };
+		E9CD0C071E8AE44200ADCA9C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD0C061E8AE44200ADCA9C /* Message.swift */; };
+		E9CD0C091E8AE74200ADCA9C /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD0C081E8AE74200ADCA9C /* ConversationViewController.swift */; };
+		E9CD0C0B1E8AF1C600ADCA9C /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD0C0A1E8AF1C600ADCA9C /* MessageTableViewCell.swift */; };
 		E9F3CE261E6827C700D6F89E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3CE251E6827C700D6F89E /* AppDelegate.swift */; };
 		E9F3CE281E6827C700D6F89E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3CE271E6827C700D6F89E /* ViewController.swift */; };
 		E9F3CE2B1E6827C700D6F89E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F3CE291E6827C700D6F89E /* Main.storyboard */; };
@@ -27,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E93FE37B1E88FFBF00798089 /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
+		E98B8BCC1E8A56500045AACC /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		E9CD0C041E8AE37900ADCA9C /* Interlocutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interlocutor.swift; sourceTree = "<group>"; };
+		E9CD0C061E8AE44200ADCA9C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E9CD0C081E8AE74200ADCA9C /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		E9CD0C0A1E8AF1C600ADCA9C /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E9F3CE221E6827C700D6F89E /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F3CE251E6827C700D6F89E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9F3CE271E6827C700D6F89E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +70,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E98B8BCA1E8A509A0045AACC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9F3CE271E6827C700D6F89E /* ViewController.swift */,
+				E93FE37B1E88FFBF00798089 /* ConversationListViewController.swift */,
+				E9CD0C081E8AE74200ADCA9C /* ConversationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E98B8BCB1E8A50A50045AACC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E98B8BCC1E8A56500045AACC /* ContactTableViewCell.swift */,
+				E9CD0C0A1E8AF1C600ADCA9C /* MessageTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E98B8BD21E8A6D610045AACC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9CD0C041E8AE37900ADCA9C /* Interlocutor.swift */,
+				E9CD0C061E8AE44200ADCA9C /* Message.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E9F3CE191E6827C700D6F89E = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				E9F3CE251E6827C700D6F89E /* AppDelegate.swift */,
-				E9F3CE271E6827C700D6F89E /* ViewController.swift */,
+				E98B8BD21E8A6D610045AACC /* Model */,
+				E98B8BCB1E8A50A50045AACC /* View */,
+				E98B8BCA1E8A509A0045AACC /* Controller */,
 				E9F3CE291E6827C700D6F89E /* Main.storyboard */,
 				E9F3CE2F1E6827C700D6F89E /* Assets.xcassets */,
 				E9F3CE311E6827C700D6F89E /* LaunchScreen.storyboard */,
@@ -205,8 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F3CE281E6827C700D6F89E /* ViewController.swift in Sources */,
+				E98B8BCD1E8A56500045AACC /* ContactTableViewCell.swift in Sources */,
+				E9CD0C091E8AE74200ADCA9C /* ConversationViewController.swift in Sources */,
+				E93FE37C1E88FFBF00798089 /* ConversationListViewController.swift in Sources */,
+				E9CD0C051E8AE37900ADCA9C /* Interlocutor.swift in Sources */,
 				E9F3CE261E6827C700D6F89E /* AppDelegate.swift in Sources */,
 				E9F3CE2E1E6827C700D6F89E /* TinkoffChat.xcdatamodeld in Sources */,
+				E9CD0C071E8AE44200ADCA9C /* Message.swift in Sources */,
+				E9CD0C0B1E8AF1C600ADCA9C /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

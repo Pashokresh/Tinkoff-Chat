@@ -154,6 +154,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate,
     @IBAction func saveAction(_ sender: Any) {
         
         print("Сохранение данных профиля")
+        self.dismiss(animated: true, completion: {})
     }
     
     @IBAction func changeColorAction(_ sender: Any) {
