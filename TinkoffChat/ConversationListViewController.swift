@@ -46,21 +46,21 @@ class ConversationListViewController: UIViewController, UITableViewDelegate, UIT
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell") as! ContactTableViewCell
         
-        cell.date = Date(timeIntervalSinceReferenceDate: 0)
+        cell.date = Date(timeIntervalSinceNow: -(Double(arc4random_uniform(5000000))))
         cell.online = indexPath.section == 0 ? true : false
         
         
         
         if indexPath.section == 0  {
-            cell.contentView.backgroundColor = UIColor.yellow
-            cell.name = "Павел"
-            cell.hasUnreadMessages = true
-            cell.message = "Привет, как дела?"
+            //cell.contentView.backgroundColor = UIColor.yellow
+            cell.name = indexPath.row % 2 == 0 ? "Пользователь" : "Собеседник"
+            cell.hasUnreadMessages = indexPath.row % 3 == 2 ? true : false
+            cell.message = indexPath.row % 4 > 1 ? "Привет, как дела?" : nil
         } else {
-            cell.contentView.backgroundColor = UIColor.clear
-            cell.nameLabel.text = "Koнтакт оффлайн"
-            cell.hasUnreadMessages = false
-            cell.message = nil
+            //cell.contentView.backgroundColor = UIColor.clear
+            cell.nameLabel.text = indexPath.row % 2 == 1 ? "Пользователь" : "Собеседник"
+            cell.hasUnreadMessages = indexPath.row % 3 == 1 ? true : false
+            cell.message = indexPath.row % 5 > 1 ? "До встречи!": nil
         }
         
         return cell
@@ -82,8 +82,6 @@ class ConversationListViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath)
-    
-        performSegue(withIdentifier: "ConversationViewController", sender: cell)
         
         cell?.isSelected = false
     }
