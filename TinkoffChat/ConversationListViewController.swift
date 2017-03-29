@@ -52,12 +52,10 @@ class ConversationListViewController: UIViewController, UITableViewDelegate, UIT
         
         
         if indexPath.section == 0  {
-            //cell.contentView.backgroundColor = UIColor.yellow
             cell.name = indexPath.row % 2 == 0 ? "Пользователь" : "Собеседник"
             cell.hasUnreadMessages = indexPath.row % 3 == 2 ? true : false
             cell.message = indexPath.row % 4 > 1 ? "Привет, как дела?" : nil
         } else {
-            //cell.contentView.backgroundColor = UIColor.clear
             cell.nameLabel.text = indexPath.row % 2 == 1 ? "Пользователь" : "Собеседник"
             cell.hasUnreadMessages = indexPath.row % 3 == 1 ? true : false
             cell.message = indexPath.row % 5 > 1 ? "До встречи!": nil

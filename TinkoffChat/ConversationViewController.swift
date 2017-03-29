@@ -17,6 +17,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorStyle = .none
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 60
 
@@ -45,6 +46,9 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "From") as! MessageTableViewCell
         }
+
+        cell.messageLabel.layer.cornerRadius = 3
+        cell.messageLabel.layer.masksToBounds = true
         cell.messageLabel.preferredMaxLayoutWidth = 3 * self.view.bounds.size.width / 4
         
         if (indexPath.row) % 3 == 0 {
